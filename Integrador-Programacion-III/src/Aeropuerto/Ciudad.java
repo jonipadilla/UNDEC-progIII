@@ -2,6 +2,7 @@ package Aeropuerto;
 
 public class Ciudad {
 	
+	private Integer idCiudad;
 	private String nombre;
 	private String codigoPostal;
 	
@@ -25,6 +26,16 @@ public class Ciudad {
 	
 	public void setCodigoPostal(String codigoPostal) {
 		this.codigoPostal = codigoPostal;
+	}
+
+
+	public Integer getIdCiudad() {
+		return idCiudad;
+	}
+
+
+	public void setIdCiudad(Integer idCiudad) {
+		this.idCiudad = idCiudad;
 	}
 	
 	
