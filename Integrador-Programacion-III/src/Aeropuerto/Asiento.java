@@ -5,9 +5,9 @@ public class Asiento {
 	private Integer idAsiento;
 	private String numeroAsiento;
 	
-	
-	public Asiento() {
-		
+	public Asiento(Integer idAsiento, String numeroAsiento) {
+		this.idAsiento = idAsiento;
+		this.numeroAsiento = numeroAsiento;
 	}
 
 

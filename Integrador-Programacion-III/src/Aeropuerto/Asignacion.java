@@ -6,12 +6,14 @@ public class Asignacion {
 	private Asiento asiento;
 	private Pasajero pasajero;
 	
-	
-	public Asignacion() {
-		
+			
+	public Asignacion(String codigoAsignacion, Asiento asiento, Pasajero pasajero) {
+		this.codigoAsignacion = codigoAsignacion;
+		this.asiento = asiento;
+		this.pasajero = pasajero;
 	}
-	
-	
+
+
 	public Asiento getAsiento() {
 		return asiento;
 	}

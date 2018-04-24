@@ -11,10 +11,12 @@ public class Avion {
 	ArrayList<Asiento> listaAsientos = new ArrayList<Asiento>();
 	
 	
-	public Avion() {
-		
+	public Avion(Integer idAvion, String modelo, String matricula, ArrayList<Asiento> listaAsientos) {
+		this.idAvion = idAvion;
+		this.modelo = modelo;
+		this.matricula = matricula;
+		this.listaAsientos = listaAsientos;
 	}
-	
 
 	public Integer getIdAvion() {
 		return idAvion;

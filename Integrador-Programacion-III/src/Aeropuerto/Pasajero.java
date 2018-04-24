@@ -8,8 +8,13 @@ public class Pasajero {
 	private String nombre;
 	private String telefono;
 	
-	public Pasajero() {
-		
+	
+	public Pasajero(Integer idPasajero, String cuil, String apellido, String nombre, String telefono) {
+		this.idPasajero = idPasajero;
+		this.cuil = cuil;
+		this.apellido = apellido;
+		this.nombre = nombre;
+		this.telefono = telefono;
 	}
 
 	public Integer getIdPasajero() {

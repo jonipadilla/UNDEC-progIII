@@ -4,13 +4,19 @@ import java.time.LocalDate;
 
 public class Piloto {
 	
+	private Integer idPiloto;
 	private String apellido;
 	private String nombre;
 	private String documento;
 	private LocalDate fechaNacimiento;
 	
-	public Piloto() {
-		
+	public Piloto(Integer idPiloto, String apellido, String nombre, String documento, LocalDate fechaNacimiento) {
+		super();
+		this.setIdPiloto(idPiloto);
+		this.apellido = apellido;
+		this.nombre = nombre;
+		this.documento = documento;
+		this.fechaNacimiento = fechaNacimiento;
 	}
 
 	public String getApellido() {
@@ -43,6 +49,14 @@ public class Piloto {
 
 	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public Integer getIdPiloto() {
+		return idPiloto;
+	}
+
+	public void setIdPiloto(Integer idPiloto) {
+		this.idPiloto = idPiloto;
 	}
 	
 	
