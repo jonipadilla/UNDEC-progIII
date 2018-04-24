@@ -7,11 +7,12 @@ public class Aeropuerto {
 	private String codigo;	
 	private Ciudad ciudad;
 	
-	
-	public Aeropuerto(Integer idAeropuerto, String nombre, String codigo){
-		this.nombre= nombre;
-		this.codigo= codigo;
-			
+	public Aeropuerto(Integer idAeropuerto, String nombre, String codigo, Ciudad ciudad) {
+		super();
+		this.idAeropuerto = idAeropuerto;
+		this.nombre = nombre;
+		this.codigo = codigo;
+		this.ciudad = ciudad;
 	}
 
 

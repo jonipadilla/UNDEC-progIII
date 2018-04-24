@@ -7,8 +7,11 @@ public class Ciudad {
 	private String codigoPostal;
 	
 	
-	public Ciudad() {
-		
+	public Ciudad(Integer idCiudad, String nombre, String codigoPostal) {
+		super();
+		this.idCiudad = idCiudad;
+		this.nombre = nombre;
+		this.codigoPostal = codigoPostal;
 	}
 	
 	

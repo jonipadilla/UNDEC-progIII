@@ -6,8 +6,10 @@ public class Aerolinea {
 	private String nombre;
 	
 	
-	public Aerolinea() {
-		
+	public Aerolinea(Integer idAerolinea, String nombre) {
+		super();
+		this.idAerolinea = idAerolinea;
+		this.nombre = nombre;
 	}
 
 
