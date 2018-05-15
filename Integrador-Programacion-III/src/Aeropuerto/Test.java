@@ -5,6 +5,11 @@ import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.ArrayList;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
+import LogicaAeropuerto.GestorCiudad;
+import jdk.internal.dynalink.beans.StaticClass;
+
 public class Test {
 
 	public static void main(String[] args) {
@@ -22,7 +27,7 @@ public class Test {
 				miCiudad.add(nuevaCiudad1);
 				miCiudad.add(nuevaCiudad2);
 				miCiudad.add(nuevaCiudad3);
-				miCiudad.add(nuevaCiudad4);
+				miCiudad.add(nuevaCiudad4);		
 				
 				
 				//AEROLINEA
@@ -159,11 +164,47 @@ public class Test {
 				
 				//Vuelo nuevoVuelo = new Vuelo("1",nuevoAeropuerto1,nuevoAeropuerto2,fechaHoraS,fechaHoraA,nuevaAerolinea1, nuevoAvion1,misPilotos,misAsignaciones);
 				//Vuelo nuevoVuelo = new Vuelo("1",nuevoAeropuerto1, fechaHoraS, nuevoAeropuerto2, fechaHoraA, nuevaAerolinea1, nuevoAvion1, misPilotos, misAsignaciones);
-				Vuelo nuevoVuelo2 = new Vuelo("2", nuevoAeropuerto1, fechaHoraS, nuevoAeropuerto2, fechaHoraA, nuevaAerolinea1, nuevoAvion1, misPilotos, misAsignaciones);
+				Vuelo nuevoVuelo = new Vuelo("2", nuevoAeropuerto1, fechaHoraS, nuevoAeropuerto2, fechaHoraA, nuevaAerolinea1, nuevoAvion1, misPilotos, misAsignaciones);
 				
-				//misVuelos.add(nuevoVuelo);
+				misVuelos.add(nuevoVuelo);
 				
-				//mostrarDetalleVuelo(misVuelos, "1");
+				
+								
+				//MOSTRAR DETALLE DE VUELO
+				mostrarDetalleVuelo(misVuelos, "AR2443");
+					
+
+				//MOSTRAR DETALLE DE ASIGNACIONES
+				mostrarDetalleAsignaciones(misVuelos,"AR2443");
+				
+				
+				//MOSTRAR PILOTOS POR EDAD
+				mostrarPilotosPorEdad(misPilotos);
 	}
+	
+	
+		public static void mostrarDetalleVuelo(ArrayList<Vuelo> misVuelos, String codigoV) {
+			for (Vuelo vuelo : misVuelos) {
+				if(vuelo.getCodigoVuelo().equals(codigoV)){
+				System.out.println("vuelo" +" "+ vuelo.getCodigoVuelo() +"-"+ vuelo.getAvion().getModelo());
+				}
+			}
+		}
+	
+	
+		public static void mostrarDetalleAsignaciones(ArrayList<Vuelo> misVuelos, String codVueloAsignacion) {
+			for (Vuelo vuelo : misVuelos) {
+				if (vuelo.getCodigoVuelo().equals(codVueloAsignacion)) {
+				System.out.println("Detalle de asignaciones - vuelo " + vuelo.getCodigoVuelo() + vuelo.getAsigancionPasajeros());
+					
+				}
+			}
+		}
+	
+	
+		public static void mostrarPilotosPorEdad(ArrayList<Piloto> misPilotos) {
+		//for (Piloto piloto : misPilotos) {
+			
+		}
 
 }

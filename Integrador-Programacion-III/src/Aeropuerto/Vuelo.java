@@ -1,6 +1,6 @@
 package Aeropuerto;
 
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -30,8 +30,8 @@ public class Vuelo {
 		this.fechaHoraArribo = fechaHoraArribo;
 		this.aeroliniea = aeroliniea;
 		this.avion = avion;
-		this.mPilotos = mPilotos;
-		this.asigancionPasajeros = asigancionPasajeros;
+		this.setmPilotos(mPilotos);
+		this.setAsigancionPasajeros(asigancionPasajeros);
 	}
 
 
@@ -102,6 +102,26 @@ public class Vuelo {
 
 	public void setAvion(Avion avion) {
 		this.avion = avion;
+	}
+
+
+	public ArrayList<Piloto> getmPilotos() {
+		return mPilotos;
+	}
+
+
+	public void setmPilotos(ArrayList<Piloto> mPilotos) {
+		this.mPilotos = mPilotos;
+	}
+
+
+	public ArrayList<Asignacion> getAsigancionPasajeros() {
+		return asigancionPasajeros;
+	}
+
+
+	public void setAsigancionPasajeros(ArrayList<Asignacion> asigancionPasajeros) {
+		this.asigancionPasajeros = asigancionPasajeros;
 	}
 
 

@@ -8,7 +8,6 @@ public class Aeropuerto {
 	private Ciudad ciudad;
 	
 	public Aeropuerto(Integer idAeropuerto, String nombre, String codigo, Ciudad ciudad) {
-		super();
 		this.idAeropuerto = idAeropuerto;
 		this.nombre = nombre;
 		this.codigo = codigo;
