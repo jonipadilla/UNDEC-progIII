@@ -19,6 +19,28 @@ public class GestorAeropuerto {
 	}
 	
 	
+	public boolean modificarAeropuerto(Aeropuerto nuevoAeropuerto, Aeropuerto viejoAeropuerto) {	
+			
+		if (!misAeropuertos.contains(viejoAeropuerto))
+				return false;
+				
+		misAeropuertos.remove(viejoAeropuerto);
+		misAeropuertos.add(nuevoAeropuerto);
+		return true;
+
+	}
+	
+	
+	public boolean bajaAeropuerto(Aeropuerto nuevoAeropuerto) {
+		for (Aeropuerto aeropuerto : misAeropuertos) {
+			
+			if (existeAeropuerto(aeropuerto.getCodigo())==true) {
+				misAeropuertos.remove(nuevoAeropuerto);
+				return true;				
+			}
+		}
+		return false;
+	}
 	
 	
 	

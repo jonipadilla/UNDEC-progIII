@@ -164,7 +164,7 @@ public class Test {
 				
 				//Vuelo nuevoVuelo = new Vuelo("1",nuevoAeropuerto1,nuevoAeropuerto2,fechaHoraS,fechaHoraA,nuevaAerolinea1, nuevoAvion1,misPilotos,misAsignaciones);
 				//Vuelo nuevoVuelo = new Vuelo("1",nuevoAeropuerto1, fechaHoraS, nuevoAeropuerto2, fechaHoraA, nuevaAerolinea1, nuevoAvion1, misPilotos, misAsignaciones);
-				Vuelo nuevoVuelo = new Vuelo("2", nuevoAeropuerto1, fechaHoraS, nuevoAeropuerto2, fechaHoraA, nuevaAerolinea1, nuevoAvion1, misPilotos, misAsignaciones);
+				Vuelo nuevoVuelo = new Vuelo("AR2443", nuevoAeropuerto1, fechaHoraS, nuevoAeropuerto2, fechaHoraA, nuevaAerolinea1, nuevoAvion1, misPilotos, misAsignaciones);
 				
 				misVuelos.add(nuevoVuelo);
 				
@@ -186,7 +186,7 @@ public class Test {
 		public static void mostrarDetalleVuelo(ArrayList<Vuelo> misVuelos, String codigoV) {
 			for (Vuelo vuelo : misVuelos) {
 				if(vuelo.getCodigoVuelo().equals(codigoV)){
-				System.out.println("vuelo" +" "+ vuelo.getCodigoVuelo() +"-"+ vuelo.getAvion().getModelo());
+					System.out.println("vuelo" +" "+ vuelo.getCodigoVuelo() +"-"+ vuelo.getAvion().getModelo());
 				}
 			}
 		}

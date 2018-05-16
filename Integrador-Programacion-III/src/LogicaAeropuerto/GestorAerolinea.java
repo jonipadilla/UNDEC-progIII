@@ -28,7 +28,7 @@ public class GestorAerolinea {
 		return true;
 	}
 	
-	public boolean bajaCiudad(String nombre) {
+	public boolean bajaAerolinea(String nombre) {
 		for (Aerolinea aerolinea : misAerolineas) {
 			if (nombre==aerolinea.getNombre()) {
 				misAerolineas.remove(aerolinea);
