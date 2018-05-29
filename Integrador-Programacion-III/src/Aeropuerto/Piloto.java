@@ -58,6 +58,11 @@ public class Piloto {
 	public void setIdPiloto(Integer idPiloto) {
 		this.idPiloto = idPiloto;
 	}
+
+	public String getSurnameAndName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

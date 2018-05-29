@@ -125,6 +125,12 @@ public class Vuelo {
 	}
 
 
+	public String getDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 		
 	
 

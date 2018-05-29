@@ -9,7 +9,7 @@ public class GestorAvion {
 	
 	private ArrayList<Avion> miAvion = new ArrayList<>();
 	
-	public boolean crearCiudad(Avion nuevoAvion) {
+	public boolean crearAvion(Avion nuevoAvion) {
 		
 		if (existeAvion(nuevoAvion.getMatricula())==false) {		
 			miAvion.add(nuevoAvion);

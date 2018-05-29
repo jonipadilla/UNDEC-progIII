@@ -1,11 +1,13 @@
 package Aeropuerto;
 
+
 public class Aeropuerto {
 	
 	private Integer idAeropuerto;
 	private String nombre;
 	private String codigo;	
 	private Ciudad ciudad;
+
 	
 	public Aeropuerto(Integer idAeropuerto, String nombre, String codigo, Ciudad ciudad) {
 		this.idAeropuerto = idAeropuerto;
@@ -57,6 +59,12 @@ public class Aeropuerto {
 	
 	public void mostrarAeropuertos() {
 		System.out.println("Los Aeropuertos son: ");
+	}
+
+
+	public String showDenomination() {
+					//System.out.println(aeropuerto.getNombre() + "-" + aeropuerto.getCiudad().getNombre() +"-"+ aeropuerto.getCodigo());
+		return getNombre() + " - " + getCiudad().getNombre() + " - " + getCodigo();
 	}
 
 	
