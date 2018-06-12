@@ -7,30 +7,31 @@ import Aeropuerto.Avion;
 public class GestorAvion {
 	
 	
-	private ArrayList<Avion> miAvion = new ArrayList<>();
+	public ArrayList<Avion> coleccionAviones = new ArrayList<>();
+	
 	
 	public boolean crearAvion(Avion nuevoAvion) {
 		
 		if (existeAvion(nuevoAvion.getMatricula())==false) {		
-			miAvion.add(nuevoAvion);
+			coleccionAviones.add(nuevoAvion);
 			return true;
 		}
 		return false;
 	}
 
 	public boolean modificarAvion(Avion AvionNuevo, Avion AvionViejo) {
-		if (!miAvion.contains(AvionViejo))
+		if (!coleccionAviones.contains(AvionViejo))
 			return false;
 			
-		miAvion.remove(AvionViejo);
-		miAvion.add(AvionNuevo);
+		coleccionAviones.remove(AvionViejo);
+		coleccionAviones.add(AvionNuevo);
 		return true;
 	}
 	
 	public boolean bajaAvion(Avion nuevoAvion) {
-		for (Avion avion : miAvion) {
+		for (Avion avion : coleccionAviones) {
 			if (existeAvion(avion.getMatricula())==true) {
-				miAvion.remove(nuevoAvion);
+				coleccionAviones.remove(nuevoAvion);
 				return true;				
 			}
 		}
@@ -39,7 +40,7 @@ public class GestorAvion {
 	
 	
 	public boolean existeAvion(String codigoMatricula) {
-		for (Avion avion : miAvion) {
+		for (Avion avion : coleccionAviones) {
 			if (codigoMatricula==avion.getMatricula()) {
 				return true;
 			}
