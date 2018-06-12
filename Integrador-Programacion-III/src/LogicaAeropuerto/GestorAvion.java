@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import Aeropuerto.Avion;
 
 public class GestorAvion {
-	
-	
+
+
 	public ArrayList<Avion> coleccionAviones = new ArrayList<>();
-	
-	
+
+
 	public boolean crearAvion(Avion nuevoAvion) {
-		
-		if (existeAvion(nuevoAvion.getMatricula())==false) {		
+
+		if (existeAvion(nuevoAvion.getMatricula())==false && existeAvionPorId(nuevoAvion.getIdAvion())==false) {		
 			coleccionAviones.add(nuevoAvion);
 			return true;
 		}
@@ -20,14 +20,15 @@ public class GestorAvion {
 	}
 
 	public boolean modificarAvion(Avion AvionNuevo, Avion AvionViejo) {
-		if (!coleccionAviones.contains(AvionViejo))
+		if (!coleccionAviones.contains(AvionViejo)) {
 			return false;
-			
+		}
+
 		coleccionAviones.remove(AvionViejo);
 		coleccionAviones.add(AvionNuevo);
 		return true;
 	}
-	
+
 	public boolean bajaAvion(Avion nuevoAvion) {
 		for (Avion avion : coleccionAviones) {
 			if (existeAvion(avion.getMatricula())==true) {
@@ -37,8 +38,8 @@ public class GestorAvion {
 		}
 		return false;
 	}
-	
-	
+
+
 	public boolean existeAvion(String codigoMatricula) {
 		for (Avion avion : coleccionAviones) {
 			if (codigoMatricula==avion.getMatricula()) {
@@ -48,4 +49,13 @@ public class GestorAvion {
 		return false;
 	}
 
+	public boolean existeAvionPorId(int idAvion) {
+		for (Avion avion : coleccionAviones) {
+			if(idAvion==avion.getIdAvion()) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
+

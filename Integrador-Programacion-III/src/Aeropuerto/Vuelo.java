@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 
 public class Vuelo {
-	
+
 	private String codigoVuelo;
 	private Aeropuerto salida;
 	private LocalDateTime fechaHoraSalida;
@@ -14,13 +14,13 @@ public class Vuelo {
 	private LocalDateTime fechaHoraArribo;
 	private Aerolinea aeroliniea;
 	private Avion avion;
-	
+
 	private ArrayList<Piloto> mPilotos = new ArrayList<Piloto>();
 	private ArrayList<Asignacion> asigancionPasajeros = new ArrayList<Asignacion>();
-	
-	
-	
-	public Vuelo(String codigoVuelo, Aeropuerto salida, LocalDateTime fechaHoraSalida, Aeropuerto arribo,
+
+
+
+	/*public Vuelo(String codigoVuelo, Aeropuerto salida, LocalDateTime fechaHoraSalida, Aeropuerto arribo,
 			LocalDateTime fechaHoraArribo, Aerolinea aeroliniea, Avion avion, ArrayList<Piloto> mPilotos,
 			ArrayList<Asignacion> asigancionPasajeros) {
 		this.codigoVuelo = codigoVuelo;
@@ -32,6 +32,13 @@ public class Vuelo {
 		this.avion = avion;
 		this.setmPilotos(mPilotos);
 		this.setAsigancionPasajeros(asigancionPasajeros);
+	}*/
+
+
+	public Vuelo(String string, Aeropuerto origin, LocalDateTime of, Aeropuerto destination, LocalDateTime of2,
+			Aerolinea austral, Object object, Avion embraer, Object object2) {
+
+
 	}
 
 
@@ -131,7 +138,7 @@ public class Vuelo {
 	}
 
 
-		
-	
+
+
 
 }
