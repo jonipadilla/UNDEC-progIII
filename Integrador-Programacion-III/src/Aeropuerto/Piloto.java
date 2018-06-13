@@ -3,13 +3,13 @@ package Aeropuerto;
 import java.time.LocalDate;
 
 public class Piloto {
-	
+
 	private Integer idPiloto;
 	private String apellido;
 	private String nombre;
 	private String documento;
 	private LocalDate fechaNacimiento;
-	
+
 	public Piloto(Integer idPiloto, String apellido, String nombre, String documento, LocalDate fechaNacimiento) {
 		super();
 		this.setIdPiloto(idPiloto);
@@ -63,7 +63,13 @@ public class Piloto {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
+
+
+	public int getAge(LocalDate of) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
 
 }

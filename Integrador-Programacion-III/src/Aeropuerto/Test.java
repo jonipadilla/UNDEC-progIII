@@ -216,7 +216,7 @@ public class Test {
 
 					for (Asignacion asignacion: vuelo.getAsigancionPasajeros()) {
 
-						//System.out.println("Asiento > " + asiento.getNumeroAsiento() + " - ASignacion > " + asignacion.getAsiento().getNumeroAsiento());
+						//System.out.println("Asiento " + asiento.getNumeroAsiento() + " - ASignacion  " + asignacion.getAsiento().getNumeroAsiento());
 
 						if (asiento.getNumeroAsiento().equals(asignacion.getAsiento().getNumeroAsiento())) {
 							encontrado = true;
@@ -225,12 +225,11 @@ public class Test {
 						}
 
 					}
-
-
-
-
-
+					if(encontrado==false) {
+						System.out.println("Asiento : " + asiento.getNumeroAsiento() + " - libre");
+					}
 				}	
+
 			}
 		}
 	}
